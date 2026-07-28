@@ -1,6 +1,6 @@
-# USB Auto Checker
+# USB Device Validator
 
-Python Automatic USB Testing Tool
+USB Device Validator is a Python-based tool for monitoring and validating USB devices.
 
 ---
 
@@ -18,7 +18,7 @@ Python Automatic USB Testing Tool
 
 🌐 GitHub Pages
 
-https://codingarista.github.io/usb-auto-check/
+https://github.com/codingarista/usb-device-validator
 
 ---
 
