@@ -1,6 +1,6 @@
 # USB Device Validator
 
-Python-based USB device validation and monitoring tool.
+USB Device Validator is a Python-based tool for monitoring and validating USB devices.
 
 ---
 
