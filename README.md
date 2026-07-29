@@ -34,15 +34,15 @@ Python 模組化架構設計
 ```
 usb-device-validator/
 ├── src/
-│   ├── main.py        # Entry point; orchestrates the full test pipeline
-│   ├── detector.py     # USB device detection (Windows WMI + simulation fallback)
-│   ├── validator.py    # Read/write validation logic, type-aware
-│   ├── reporter.py     # HTML report + JSON log generation
-│   └── db.py            # MySQL persistence layer
-├── tests/                # pytest unit tests
-├── reports/              # Generated HTML reports (+ a committed sample)
-├── logs/                 # Generated JSON test logs
-├── check_usb.py          # Original single-file script (kept for reference)
+│   ├── main.py            # Entry point; orchestrates the full test pipeline
+│   ├── detector.py        # USB device detection (Windows WMI + simulation fallback)
+│   ├── validator.py       # Read/write validation logic, type-aware
+│   ├── reporter.py        # HTML report + JSON log generation
+│   └── db.py              # MySQL persistence layer
+├── tests/                 # pytest unit tests
+├── reports/               # Generated HTML reports (+ a committed sample)
+├── logs/                  # Generated JSON test logs
+├── check_usb.py           # Original single-file script (kept for reference)
 ├── requirements.txt       # Runtime dependencies
 ├── requirements-dev.txt   # + testing dependencies
 ├── .env.example           # Template for local database credentials
