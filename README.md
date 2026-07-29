@@ -2,6 +2,8 @@
 
 A modular USB hardware validation and test automation tool, refactored from a single-file script into a layered, testable architecture. Built to demonstrate practical hardware validation and test automation engineering practices: device detection, automated read/write validation, structured reporting, and database-backed test history.
 
+
+
 ### Focus Areas / 專案重點
 
 **Hardware validation framework**  
@@ -18,6 +20,7 @@ USB 裝置偵測與驗證流程
 
 **Modular Python architecture**  
 Python 模組化架構設計
+
 
 
 ## Screenshot
