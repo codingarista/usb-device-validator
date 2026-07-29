@@ -20,6 +20,8 @@ USB 裝置偵測與驗證流程
 Python 模組化架構設計
 
 
+## Screenshot
+
 <img width="1293" height="707" alt="0729 test" src="https://github.com/user-attachments/assets/8d64d6cd-c5a2-4441-88a1-0e8bf0e0461f" />
 
 
