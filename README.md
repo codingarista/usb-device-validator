@@ -20,6 +20,7 @@ USB 裝置偵測與驗證流程
 Python 模組化架構設計
 
 
+
 ## Features
 
 - **Real device detection (Windows)** — queries WMI via PowerShell to detect connected USB mass storage drives and portable devices (e.g. phones in MTP mode), with graceful simulation fallback when no real device is present.
