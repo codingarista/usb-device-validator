@@ -2,6 +2,24 @@
 
 A modular USB hardware validation and test automation tool, refactored from a single-file script into a layered, testable architecture. Built to demonstrate practical hardware validation and test automation engineering practices: device detection, automated read/write validation, structured reporting, and database-backed test history.
 
+### Focus Areas / 專案重點
+
+**Hardware validation framework**  
+硬體驗證框架設計
+
+**USB device detection & validation**  
+USB 裝置偵測與驗證流程
+
+**Automation testing workflow**  
+自動化測試流程設計
+
+**HTML report generation**  
+自動化測試報告產生
+
+**Modular Python architecture**  
+Python 模組化架構設計
+
+
 ## Features
 
 - **Real device detection (Windows)** — queries WMI via PowerShell to detect connected USB mass storage drives and portable devices (e.g. phones in MTP mode), with graceful simulation fallback when no real device is present.
@@ -160,20 +178,4 @@ A self-developed USB device validation project with AI-assisted development.
 - Git
 - GitHub
 
-### Focus Areas / 專案重點
-
-**Hardware validation framework**  
-硬體驗證框架設計
-
-**USB device detection & validation**  
-USB 裝置偵測與驗證流程
-
-**Automation testing workflow**  
-自動化測試流程設計
-
-**HTML report generation**  
-自動化測試報告產生
-
-**Modular Python architecture**  
-Python 模組化架構設計
 
