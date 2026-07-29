@@ -1,0 +1,26 @@
+# Environment / secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+venv/
+env/
+*.egg-info/
+
+# Generated test artifacts (not sample files)
+logs/*
+!logs/.gitkeep
+reports/usb_test_report.html
+
+# Debug/scratch output
+run_output.txt
+*.tmp
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
