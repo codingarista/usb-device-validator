@@ -144,3 +144,36 @@ Documented honestly, since these are hardware/OS boundaries rather than implemen
 - [ ] Linux detection backend, verified against real hardware
 - [ ] `tests/test_db.py` with mocked database calls
 - [ ] Retry logic for transient read/write failures
+
+## Author
+
+**Arista (@codingArista)**
+
+**Python Automation & Hardware Validation Portfolio Project**
+
+A self-developed USB device validation project with AI-assisted development.
+
+### Built with
+
+- Python
+- HTML
+- Git
+- GitHub
+
+### Focus Areas / 專案重點
+
+**Hardware validation framework**  
+硬體驗證框架設計
+
+**USB device detection & validation**  
+USB 裝置偵測與驗證流程
+
+**Automation testing workflow**  
+自動化測試流程設計
+
+**HTML report generation**  
+自動化測試報告產生
+
+**Modular Python architecture**  
+Python 模組化架構設計
+
