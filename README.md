@@ -2,6 +2,27 @@
 
 A modular USB hardware validation and test automation tool, refactored from a single-file script into a layered, testable architecture. Built to demonstrate practical hardware validation and test automation engineering practices: device detection, automated read/write validation, structured reporting, and database-backed test history.
 
+### Focus Areas / 專案重點
+
+**Hardware validation framework**  
+硬體驗證框架設計
+
+**USB device detection & validation**  
+USB 裝置偵測與驗證流程
+
+**Automation testing workflow**  
+自動化測試流程設計
+
+**HTML report generation**  
+自動化測試報告產生
+
+**Modular Python architecture**  
+Python 模組化架構設計
+
+## Screenshot
+
+<img width="1293" height="707" alt="0729 test" src="https://github.com/user-attachments/assets/8d64d6cd-c5a2-4441-88a1-0e8bf0e0461f" />
+
 ## Features
 
 - **Real device detection (Windows)** — queries WMI via PowerShell to detect connected USB mass storage drives and portable devices (e.g. phones in MTP mode), with graceful simulation fallback when no real device is present.
@@ -13,25 +34,23 @@ A modular USB hardware validation and test automation tool, refactored from a si
 
 ## Architecture
 
-```
 usb-device-validator/
 ├── src/
-│   ├── main.py        # Entry point; orchestrates the full test pipeline
-│   ├── detector.py     # USB device detection (Windows WMI + simulation fallback)
-│   ├── validator.py    # Read/write validation logic, type-aware
-│   ├── reporter.py     # HTML report + JSON log generation
-│   ├── db.py            # MySQL persistence layer
-│   ├── history_logger.py # Appends each test result to logs/test_history.csv
-│   └── analyzer.py      # Aggregate stats (pandas) + chart + HTML report over test history
-├── tests/                # pytest unit tests
-├── reports/              # Generated HTML reports (+ a committed sample)
-├── logs/                 # Generated JSON test logs, test_history.csv, aggregate_report.html, failure_rate_by_type.png
-├── check_usb.py          # Original single-file script (kept for reference)
-├── requirements.txt       # Runtime dependencies
-├── requirements-dev.txt   # + testing dependencies
-├── .env.example           # Template for local database credentials
+│ ├── main.py # Entry point; orchestrates the full test pipeline
+│ ├── detector.py # USB device detection (Windows WMI + simulation fallback)
+│ ├── validator.py # Read/write validation logic, type-aware
+│ ├── reporter.py # HTML report + JSON log generation
+│ ├── db.py # MySQL persistence layer
+│ ├── history_logger.py # Appends each test result to logs/test_history.csv
+│ └── analyzer.py # Aggregate stats (pandas) + chart + HTML report over test history
+├── tests/ # pytest unit tests
+├── reports/ # Generated HTML reports (+ a committed sample)
+├── logs/ # Generated JSON test logs, test_history.csv, aggregate_report.html, failure_rate_by_type.png
+├── check_usb.py # Original single-file script (kept for reference)
+├── requirements.txt # Runtime dependencies
+├── requirements-dev.txt # + testing dependencies
+├── .env.example # Template for local database credentials
 └── README.md
-```
 
 **Data flow:** `detector` produces a standardized `DeviceInfo` → `validator` consumes it and produces a `ValidationResult` → `main` combines both into a result dict → `reporter` and `db` each independently persist that result (HTML/JSON to disk, a row to MySQL). `validator` also logs each individual test outcome via `history_logger` to `logs/test_history.csv`; `analyzer` reads that accumulated history independently, on demand, to produce aggregate statistics and reports.
 
@@ -156,14 +175,12 @@ python src/analyzer.py
 
 Example output:
 
-```
 總測試筆數: 44
 整體PASS率: 68.2%
 
 各測試項目失敗率:
-write_test    63.6%
-read_test      0.0%
-```
+write_test 63.6%
+read_test 0.0%
 
 ## Known Limitations
 
