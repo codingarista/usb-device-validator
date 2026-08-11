@@ -33,7 +33,7 @@ Python 模組化架構設計
 - **Unit tested** — core modules (`detector`, `validator`, `reporter`) are covered by `pytest` unit tests.
 
 ## Architecture
-
+```
 usb-device-validator/
 ├── src/
 │ ├── main.py # Entry point; orchestrates the full test pipeline
@@ -51,7 +51,7 @@ usb-device-validator/
 ├── requirements-dev.txt # + testing dependencies
 ├── .env.example # Template for local database credentials
 └── README.md
-
+```
 
 **Data flow:** `detector` produces a standardized `DeviceInfo` → `validator` consumes it and produces a `ValidationResult` → `main` combines both into a result dict → `reporter` and `db` each independently persist that result (HTML/JSON to disk, a row to MySQL). `validator` also logs each individual test outcome via `history_logger` to `logs/test_history.csv`; `analyzer` reads that accumulated history independently, on demand, to produce aggregate statistics and reports.
 
