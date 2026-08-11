@@ -52,6 +52,7 @@ usb-device-validator/
 ├── .env.example # Template for local database credentials
 └── README.md
 
+
 **Data flow:** `detector` produces a standardized `DeviceInfo` → `validator` consumes it and produces a `ValidationResult` → `main` combines both into a result dict → `reporter` and `db` each independently persist that result (HTML/JSON to disk, a row to MySQL). `validator` also logs each individual test outcome via `history_logger` to `logs/test_history.csv`; `analyzer` reads that accumulated history independently, on demand, to produce aggregate statistics and reports.
 
 Each module has a single, isolated responsibility and no module reaches into another's internals — this keeps every layer independently testable and replaceable (e.g. swapping the detection backend for a Linux implementation later requires no changes to `validator`, `reporter`, or `db`).
